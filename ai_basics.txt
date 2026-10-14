@@ -1,0 +1,7 @@
+Retrieval-augmented generation (RAG) combines document retrieval with a large language model. The system first finds the passages most relevant to a question, then passes them to the model as context so the answer is grounded in the supplied text rather than the model's memory alone.
+
+Documents are split into chunks because language models have a limited context window. Overlapping chunks make sure an idea that sits on a boundary is not cut in half. Each chunk keeps a source label so answers can cite where information came from.
+
+Prompt engineering is the practice of designing instructions for a language model. Structured prompts that state rules, request citations and limit answer length usually produce more consistent responses than a bare question. Asking for JSON output makes responses easier to validate automatically.
+
+Response validation checks that an answer is not empty, that it overlaps with the retrieved context, that it relates to the question, and that it cites its sources or clearly says the information was not found.

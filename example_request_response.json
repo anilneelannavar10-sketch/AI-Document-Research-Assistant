@@ -1,0 +1,27 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/ask",
+    "body": {
+      "question": "What is retrieval-augmented generation?",
+      "prompt": "v2_structured"
+    }
+  },
+  "response": {
+    "question": "What is retrieval-augmented generation?",
+    "answer": "RAG combines document retrieval with an LLM so answers are grounded in supplied text. [ai_basics.txt#0]",
+    "sources": ["ai_basics.txt#0"],
+    "validation": {
+      "passed": true,
+      "checks": {
+        "non_empty": true,
+        "grounded": true,
+        "relevant": true,
+        "cited_or_declined": true
+      },
+      "grounding_score": 0.82,
+      "relevance_score": 0.75
+    },
+    "prompt": "v2_structured"
+  }
+}
